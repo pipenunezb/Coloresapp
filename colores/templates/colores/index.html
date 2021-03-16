@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% load static %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'colores/style.css' %}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Colores App</h1>
+    <p>Inserta los valores RGB de entre 2 y 5 colores para mezclarlos según la proporción dada.</p>
+</div>
+
+<div class="container my-2 d-flex flex-row color1">
+    <div class="RGB">
+        <div class="d-flex flex-row valor_red">
+            <div class="px-1"><p>R</p></div>
+            <div class="px-1"><input type="number" min="0" max="255" value="0" class="red" id="R1"></div>
+        </div>
+        <div class="d-flex flex-row valor_green">
+            <div class="px-1"><p>G</p></div>
+            <div class="px-1"><input type="number" min="0" max="255" value="156" class="green" id="G1"></div>
+        </div>
+        <div class="d-flex flex-row valor_blue">
+            <div class="px-1"><p>B</p></div>
+            <div class="px-1"><input type="number" min="0" max="255" value="221" class="blue" id="B1"></div>
+        </div>
+    </div>
+
+    <div class="color" id="bg-c1"></div>
+
+    <div class="VALUES flex-fill">
+        <input type="range" min="0" max="1000" value="0" class="slider" id="color1">
+        <div class="d-flex flex-row">
+            <p class="val-tx">Value: <span id="value1"></span></p>
+            <p class="por-tx">Percentage: <span id="C1"></span>%</p>
+        </div>
+    </div>
+</div>
+
+<div class="container my-2 d-flex flex-row color2">
+    <div class="RGB">
+        <div class="d-flex flex-row valor_red">
+            <div class="px-1"><p>R</p></div>
+            <div class="px-1"><input type="number" min="0" max="255" value="214" class="red" id="R2"></div>
+        </div>
+        <div class="d-flex flex-row valor_green">
+            <div class="px-1"><p>G</p></div>
+            <div class="px-1"><input type="number" min="0" max="255" value="0" class="green" id="G2"></div>
+        </div>
+        <div class="d-flex flex-row valor_blue">
+            <div class="px-1"><p>B</p></div>
+            <div class="px-1"><input type="number" min="0" max="255" value="120" class="blue" id="B2"></div>
+        </div>
+    </div>
+
+    <div class="color" id="bg-c2"></div>
+
+    <div class="VALUES flex-fill">
+        <input type="range" min="0" max="1000" value="0" class="slider" id="color2">
+        <div class="d-flex flex-row">
+            <p class="val-tx">Value: <span id="value2"></span></p>
+            <p class="por-tx">Percentage: <span id="C2"></span>%</p>
+        </div>
+    </div>
+</div>
+
+<div class="container my-2 d-flex flex-row color3">
+    <div class="RGB">
+        <div class="d-flex flex-row valor_red">
+            <div class="px-1"><p>R</p></div>
+            <div class="px-1"><input type="number" min="0" max="255" value="244" class="red" id="R3"></div>
+        </div>
+        <div class="d-flex flex-row valor_green">
+            <div class="px-1"><p>G</p></div>
+            <div class="px-1"><input type="number" min="0" max="255" value="228" class="green" id="G3"></div>
+        </div>
+        <div class="d-flex flex-row valor_blue">
+            <div class="px-1"><p>B</p></div>
+            <div class="px-1"><input type="number" min="0" max="255" value="0" class="blue" id="B3"></div>
+        </div>
+    </div>
+
+    <div class="color"  id="bg-c3"></div>
+
+    <div class="VALUES flex-fill">
+        <input type="range" min="0" max="1000" value="0" class="slider" id="color3">
+        <div class="d-flex flex-row">
+            <p class="val-tx">Value: <span id="value3"></span></p>
+            <p class="por-tx">Percentage: <span id="C3"></span></p>
+        </div>
+    </div>
+</div>
+
+<div class="container my-2 d-flex flex-row color4">
+    <div class="RGB">
+        <div class="d-flex flex-row valor_red">
+            <div class="px-1"><p>R</p></div>
+            <div class="px-1"><input type="number" min="0" max="255" value="33" class="red" id="R4"></div>
+        </div>
+        <div class="d-flex flex-row valor_green">
+            <div class="px-1"><p>G</p></div>
+            <div class="px-1"><input type="number" min="0" max="255" value="30" class="green" id="G4"></div>
+        </div>
+        <div class="d-flex flex-row valor_blue">
+            <div class="px-1"><p>B</p></div>
+            <div class="px-1"><input type="number" min="0" max="255" value="22" class="blue" id="B4"></div>
+        </div>
+    </div>
+
+    <div class="color"  id="bg-c4"></div>
+
+    <div class="VALUES flex-fill">
+        <input type="range" min="0" max="1000" value="0" class="slider" id="color4">
+        <div class="d-flex flex-row">
+            <p class="val-tx">Value: <span id="value4"></span></p>
+            <p class="por-tx">Percentage: <span id="C4"></span>%</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="container my-2 d-flex flex-row color5">
+    <div class="RGB">
+        <div class="d-flex flex-row valor_red">
+            <div class="px-1"><p>R</p></div>
+            <div class="px-1"><input type="number" min="0" max="255" value="244" class="red" id="R5"></div>
+        </div>
+        <div class="d-flex flex-row valor_green">
+            <div class="px-1"><p>G</p></div>
+            <div class="px-1"><input type="number" min="0" max="255" value="249" class="green" id="G5"></div>
+        </div>
+        <div class="d-flex flex-row valor_blue">
+            <div class="px-1"><p>B</p></div>
+            <div class="px-1"><input type="number" min="0" max="255" value="255" class="blue" id="B5"></div>
+        </div>
+    </div>
+
+    <div class="color" id="bg-c5"></div>
+
+    <div class="VALUES flex-fill">
+        <input type="range" min="0" max="1000" value="0" class="slider" id="color5">
+        <div class="d-flex flex-row">
+            <p class="val-tx">Value: <span id="value5"></span></p>
+            <p class="por-tx">Percentage: <span id="C5"></span>%</p>
+        </div>
+    </div>
+</div>
+
+<div class="container total">
+    <p>Total: <span id="total"></span></p>
+</div>
+
+<div class="container my-2 d-flex flex-row">
+    <div class="RGB">
+        <div class="d-flex flex-row valor_red">
+            <div class="px-1"><p>R</p></div>
+            <div class="px-1"><input type="number" min="0" max="255" value="0" class="red" id="Re"></div>
+        </div>
+        <div class="d-flex flex-row valor_green">
+            <div class="px-1"><p>G</p></div>
+            <div class="px-1"><input type="number" min="0" max="255" value="0" class="green" id="Ge"></div>
+        </div>
+        <div class="d-flex flex-row valor_blue">
+            <div class="px-1"><p>B</p></div>
+            <div class="px-1"><input type="number" min="0" max="255" value="0" class="blue" id="Be"></div>
+        </div>
+    </div>
+
+    <div class="color reference" id="bg-re"></div>
+    <div class="color reference" id="bg-ans"></div>
+    <div class="RGB Ans">
+        <p>R: <span id="AnsR"></span></p>
+        <p>G: <span id="AnsG"></span></p>
+        <p>B: <span id="AnsB"></span></p>
+    </div>
+
+</div>
+
+<div class="container">
+    <div class="peso d-flex justify-content-center">
+        <div class="px-2"><p>PESO TOTAL:</p></div>
+        <div class="px-2"><input type="number" value="10" id="peso">g</div>
+    </div>
+
+    <div class="d-flex justify-content-center r-box">
+        <div class="color-result" id="re1"></div>
+        <div><p><span id="cant1"></span>g</p></div>
+    </div>
+
+    <div class="d-flex justify-content-center r-box">
+        <div class="color-result" id="re2"></div>
+        <div><p><span id="cant2"></span>g</p></div>
+    </div>
+
+    <div class="d-flex justify-content-center r-box">
+        <div class="color-result" id="re3"></div>
+        <div><p><span id="cant3"></span>g</p></div>
+    </div>
+
+    <div class="d-flex justify-content-center r-box">
+        <div class="color-result" id="re4"></div>
+        <div><p><span id="cant4"></span>g</p></div>
+    </div>
+
+    <div class="d-flex justify-content-center r-box">
+        <div class="color-result" id="re5"></div>
+        <div><p><span id="cant5"></span>g</p></div>
+    </div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="{% static 'colores/scriptt.js' %}"></script>
+</body>
+</html>
